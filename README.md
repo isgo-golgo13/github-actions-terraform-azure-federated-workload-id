@@ -1,4 +1,4 @@
-# GitHub Actions Terraform Azure AD and Azure Federated Identity Infrastructure Module
+# Terraform, Azure and Azure AD Workload Identity Federation Module for GitHub Actions
 Terraform module to create an Azure AD application, service principal, and federated identity for GitHub-based OIDC authentication.
 
 Creates the following resources:
@@ -15,11 +15,11 @@ The module provides GitHub Actions OIDC authentication for Azure AD.
 
 ```
 module "nonprod_env" {
-    source           = "officedepot/github-action-terraform-azuread-azurefedid"
+    source           = "isgo-golgo13/github-action-terraform-azuread-azurefedid"
     version          = "1.0"
 
     identity_name    = "github-actions-azad-azfedid-oidc"
-    repository_name  = "officedepot/"
+    repository_name  = "isgo-golgo13/"
     entity_type      = "environment"
     environment_type = "nonprod"
 }
